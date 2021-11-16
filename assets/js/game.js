@@ -6,16 +6,14 @@ var playerMoney = 10;
 //You can also log multiple values at once like this 
  console.log(playerName, playerAttack, playerHealth);
 
-//var enemyName = "Roborto";
 
-
-
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack =  12;
-
-var fight = function(){
-  //Alert the player the game just begun.  
-  window.alert("Welcome to Robot Gladiatiors!");
+//Alert the player the game just begun.  
+window.alert("Welcome to Robot Gladiatiors!");
+var fight = function(enemyName){
+  
   
   //ask player if choses to fight or not
   var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
@@ -72,4 +70,6 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
 
 
 //run fight function
-fight();
+for(var i = 0; i < enemyNames.length; i++) {
+  fight(enemyNames[i]);
+}
